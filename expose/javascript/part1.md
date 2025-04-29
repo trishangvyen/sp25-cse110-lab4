@@ -4,7 +4,7 @@
 
 3. You should not use **var** because when a variable is declared with **var**, it is either function-scoped or global-scoped making them visible through blocks. When a **var** is declared, it is processed at the start of the function or start of script if it is global, no matter what line it is in the code. This can become a problem because it can increase the chance of potential bugs from unintended access or overwrites. It can also make the code harder to read and maintain if the scope of variables isn't explicit.
 
-4. Line 9 prints 'values added: 20' since the sonsole.log is inside of the if block and we are using **let**.
+4. Line 9 prints 'values added: 20' since the console.log is inside of the if block and we are using **let**.
 
 5. Line 13 returns an ReferenceError because result is not defined within that block. Since we are using the **let** declaration, result is only defined within the if(add) block. Therefore, line 13 cannot access the result variable, throwing an error.
 
