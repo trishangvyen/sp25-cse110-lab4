@@ -1,0 +1,2 @@
+1. The bug was that the code was doing string concatenation instead of numeric addition. The result type was a string instead of a number.
+2. I would fix this by declaring result a line before making it the sum of num1 and num2, so in the first line of the function, result is declared with let to equal 0 and in the next line, result to reassigned to equal num1 + num2. This way, when result is declared beforehand, its type is a number rather than string if it was declared with num1 + num2.
