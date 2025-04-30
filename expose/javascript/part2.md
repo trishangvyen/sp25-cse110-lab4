@@ -28,15 +28,29 @@
     5.  Access index zero in the array of the courseLoad property of the student object: `student.courseLoad[0];`
 
 13. Arithmetic:
-    1.  Output: 
+    1.  '3' + 2 Output: true, because the string '2' becomes the number 2 and 2 > 1.
+    2.  '3' - 2 Output: '32' because the + sign performs string concatenation and integers map to their exact string representation.
+    3.  3 + null Output: 3, because null turns in 0 in numeric conversion, so 3 + 0 would output 3.
+    4.  '3' + null Output: '3null' because the + sign performs string concatenation and null is converted to 'null'.
+    5.  true + 3 Output: 4, because true converts into 1 in numeric conversion and 1 + 3 = 4.
+    6.  false + null Output: 0 because numeric conversion turns false into 0 and null into 0, 0 + 0 = 0.
+    7.  '3' + undefined Output: '3undefined' because the + sign performs string concatenation so undefined is converted to 'undefined'
+    8.  '3' - undefined Output: NaN, because '3' converts into the integer 3 while undefined cannot be converted into a number in numeric conversion, resulting in NaN.
 
 14. Comparison:
-    1.  Output:
+    1. '2' > 1 Output: true, because '2' is converted into the number 2 and is then compared to 1, since 2 is greater than 1, it returns true.
+    2. '2' < '12' Output: false, because both operands are strings so JS uses dictionary order to compare them. Since '2' comes after '1' in lexicographical order, it returns false.
+    3. 2 == '2' Output: true, because the string, '2', becomes the number 2, and 2 is equal to 2, so it returns true.
+    4. 2 === '2' Output: false, because === checks for strict equality, so there is no type conversion. Since 2 is a number and '2' is a string, they are not strictly equal to each other, returning false.
+    5. true == 2 Output: false, because true converts into the integer, 1, and 1 is not equal to 2, returning false.
+    6. true === Boolean(2) Output: true because Boolean(2) converts into true since any number that is not zero is true, so this turns into true === true, which will return true.
 
-15. The difference between == and === is that
+15. The difference between == and === is that == compares 2 values after converting them into a common type while === is strict equality and does not convert types, so both operands must be the same type and value for it to be true.
 
 16. in JS file part2-question16.js
 
-17. WIP
+17. The result of the function call will be: [2,4,6]. This is because first, the modifyArray function takes the array, [1,2,3], and the callback, doSomething. Inside modifyArray, an empty array named newArr is create and we loop through each item, using the doSomething function as callback to modifyArray. So, in every iteration of the loop, we are calling doSomething onto array[*i*] and pushing the output of doSomething into newArr. After the loop ends, the function returns newArr, which is [2,4,6].
 
 18. in JS file part2-question18.js
+
+19. The output of the code is: 1, 4, 3, 2 with each number being on a new line. 2 was printed with a delay because it was scheduled with setTimeout to run after 1 second. On the other hand, 1 and 4 printed immediately with no delay and 3 prints after the main code because setTimeout was used, even though it was scheduled to run after 0ms.
